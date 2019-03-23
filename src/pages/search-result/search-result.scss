@@ -1,0 +1,63 @@
+ion-card.adv-map p {
+  font-size: 0.7em !important;
+}
+
+button[fab].fab-map {
+  top: calc(100% - 35px);
+  z-index: 50;
+}
+
+.item-bold {
+  font-weight: bold;
+}
+
+ion-content.cards-bg {
+  background-color: #f4f4f7;
+}
+
+
+
+ion-col div {
+  background-color: #f0f5ff;
+  border: 1px solid #e6e9ee;
+  border-radius: 2px;
+  padding: 5px;
+  text-align: center;
+}
+
+p {
+  padding: 10px 0 0 10px !important;
+  margin: 0;
+}
+
+.start-station-label {
+  background-color: #5eb5a6;
+  color: #ffffff;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+}
+
+.end-station-label {
+  background-color: #ed8077;
+  color: #ffffff;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+ion-list .index {
+  float: left;
+  width: 50%;
+  color: #424242;
+}
+
+ion-list .data {
+  float: left;
+  width: 50%;
+  color: #424242;
+}

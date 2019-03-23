@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Search </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <li (click)="selectStation($event, item)" navPop> {{item | slice:10:end}} </li>
+    </ion-item>
+  </ion-list>
+</ion-content>

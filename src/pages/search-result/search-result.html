@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Search result </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf="searchResult.Data">
+  <ion-card *ngFor="let item of searchResult.Data" class="cards-list-demo">
+    <div *ngIf="item.StartJName && item.EndKJName">
+      <ion-card-header>
+        <span class="start-station-label"> {{ item.StartJName }} </span>
+          <ion-icon name='md-arrow-dropright' item-start></ion-icon>
+        <span class="end-station-label"> {{ item.EndKJName }} </span>
+      </ion-card-header>
+
+      <ion-list>
+        <button ion-item>
+          <ion-icon name='md-stopwatch' item-start></ion-icon>
+          <div class="index"> 所要時間 </div>
+          <div class="data"> {{ item.ShtTravelJMsg }} </div>
+        </button>
+
+        <button ion-item>
+          <ion-icon name='md-refresh-circle' item-start></ion-icon>
+          <div class="index"> 乗り換え回数 </div>
+          <div class="data"> {{ item.ShtTransferCnt }}回 </div>
+        </button>
+
+        <button ion-item>
+          <ion-icon name='ios-train' item-start></ion-icon>
+          <div class="index"> 経由駅数 </div>
+          <div class="data"> {{ item.ShtStatnCnt }} </div>
+        </button>
+
+        <button ion-item>
+          <p> {{ item.ShtStatnKName }} </p>
+        </button>
+      </ion-list>
+      <div></div>
+    </div>
+  </ion-card>
+</ion-content>

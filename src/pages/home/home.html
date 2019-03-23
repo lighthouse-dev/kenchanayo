@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Search </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content search-page-wrap" padding>
+  <button ion-button outline icon-start (click)="openSearchPage(true)" class="start-station">
+    <ion-icon name='ios-bus' is-active="false"></ion-icon> {{ startStationName }}
+  </button>
+
+  <button ion-button outline icon-start color="dark" (click)="openSearchPage(false)" class="end-station">
+    <ion-icon name='ios-bus' is-active="false"></ion-icon> {{ endStationName }}
+  </button>
+
+  <button color="danger" icon-start="" ion-button="" class="search-btn" ng-reflect-color="danger" (click)="search()">
+    <ion-icon name="md-search" role="img" class="icon icon-md ion-md-close" aria-label="close" ng-reflect-name="close"></ion-icon>
+    しらべる
+  <div class="button-effect"></div></button>
+
+  <div *ngIf="loading">loading...</div>
+</ion-content>
